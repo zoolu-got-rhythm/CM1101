@@ -81,9 +81,8 @@ def print_inventory_items(items):
     items = list_of_items(items)
 
     if items:
-        s = "You have %s." % items
+        s = "You have %s.\n" % items
         print(s)
-        print("Total mass: %skg.\n" % inventory_mass() )
 
 
 def print_room(room):
@@ -435,6 +434,7 @@ def main():
             # Display game status (room description, inventory etc.)
             print_room(current_room)
             print_inventory_items(inventory)
+            print("Total mass: %skg.\n" % inventory_mass() )
 
             # Show the menu with possible actions and ask the player
             command = menu(current_room["exits"], current_room["items"], inventory)

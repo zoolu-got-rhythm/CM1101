@@ -17,10 +17,10 @@ def remove_punct(text):
     >>> remove_punct(",go!So.?uTh")
     'goSouTh'
     """
-    punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    
     no_punc = ''
     for ch in text:
-        if ch not in punctuation:
+        if ch not in string.punctuation:
             no_punc = no_punc + ch
     return no_punc
 
